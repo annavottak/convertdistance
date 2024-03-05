@@ -1,4 +1,7 @@
-class Kilometer( private val value:Float) :Distance{
+package distance
+
+
+class Kilometer(private val value:Float) : Distance {
     override fun toKilometer() {
         println("$value км")
     }

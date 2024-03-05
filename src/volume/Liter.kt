@@ -1,4 +1,7 @@
-class Liter ( private val value:Float) :Volume
+package volume
+
+
+class Liter (private val value:Float) : Volume
 {
     override fun toLiter() {
         println("$value л")

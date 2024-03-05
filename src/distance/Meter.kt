@@ -1,4 +1,8 @@
-class Meter( private val value:Float) :Distance{
+package distance
+
+
+
+class Meter(private val value:Float) : Distance {
     override fun toKilometer() {
         println("Это ${value/1000} км")
     }

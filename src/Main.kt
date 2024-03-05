@@ -1,19 +1,15 @@
-sealed interface Distance{
-    fun toKilometer()
-    fun toCentimeter()
-    fun toMillimeter()
-    fun toMeter()
-}
-sealed interface Volume{
-    fun toLiter()
-    fun toMilliliter()
-}
+import distance.Meter
+import volume.Milliliter
+import distance.Distance
+import volume.Volume
+
+
 
 fun main() {
     print("Введите число в метрах:")
     try {
         val meterEnter = readln().toFloat()
-        val convertMeter:Distance=Meter(meterEnter)
+        val convertMeter:Distance= Meter(meterEnter)
         convertMeter.toKilometer()
         convertMeter.toCentimeter()
         convertMeter.toMillimeter()
@@ -23,7 +19,7 @@ fun main() {
     print("Введите объем в милилитрах:")
     try {
         val volume=readln().toFloat()
-        val convertMilliliter:Volume=Milliliter(volume)
+        val convertMilliliter:Volume= Milliliter(volume)
         convertMilliliter.toLiter()
 
     } catch (e: Exception) {
